@@ -1,11 +1,11 @@
 @font-face {
     font-family: eurostile;
-    src: url(Eurostile.ttf);
+    src: url('Eurostile.ttf');
 }
 
 @font-face {
     font-family: grotesk;
-    src: url(HKGrotesk-Regular.ttf);
+    src: url('HKGrotesk-Regular.ttf');
 }
 
 body {
@@ -15,6 +15,22 @@ body {
     line-height: 1;
     max-width: 960px;
     padding: 30px;
+}
+
+header, footer {
+    position: relative;
+    left: -20px;
+    width: 960px;
+    padding: 10px 20px 20px 20px;
+    background-color: beige;
+}
+
+footer {
+    padding-top: 20px;
+}
+
+#content {
+    margin: 20px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

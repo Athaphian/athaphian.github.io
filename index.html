@@ -1,1 +1,25 @@
-Hello World
+<html>
+<head>
+    <title>Test</title>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="static/markdown-site.js"></script>
+    <link rel="stylesheet" href="static/style.css"/>
+</head>
+<body>
+
+<header>
+    <h2>Athaphian's Techblog</h2>
+</header>
+
+<div id="content"></div>
+
+<footer>
+    <div>Some footnotes</div>
+</footer>
+
+<script>
+    initMarkdownSite('content', 'pages/');
+</script>
+</body>
+</html>
