@@ -1,25 +1,32 @@
 <html>
 <head>
-    <title>Test</title>
-    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="static/markdown-site.js"></script>
-    <link rel="stylesheet" href="static/style.css"/>
+	<title>Test</title>
+	<script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="static/markdown-site.js"></script>
+	<link rel="stylesheet" href="static/style.css"/>
 </head>
 <body>
 
 <header>
-    <h2>Athaphian's Techblog</h2>
+	<a href="index.html">
+		<h2>
+			<img src="img/bison.svg"/>
+			Bison Blog
+		</h2>
+		<div>Notes from the greenfields</div>
+	</a>
 </header>
 
 <div id="content"></div>
 
 <footer>
-    <div>Some footnotes</div>
+	<div>Hi! My name is <a href="https://www.linkedin.com/in/bas-biesheuvel-0a4a0842/">Bas Biesheuvel</a> and I'm from the Netherlands.</div>
+	<div>This blog is just a collection of notes and thoughts I'd like to keep for future reference.</div>
 </footer>
 
 <script>
-    initMarkdownSite('content', 'pages/');
+	initMarkdownSite('content', 'pages/');
 </script>
 </body>
 </html>

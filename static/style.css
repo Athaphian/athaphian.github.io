@@ -25,6 +25,31 @@ header, footer {
     background-color: beige;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header h2 {
+    font-size: 36px;
+    margin: 24px 0 6px;
+    padding-left: 100px;
+}
+
+header img {
+    position: absolute;
+    height: 60px;
+    left: 10px;
+    top: 20px;
+}
+
+header div {
+    font-size: 12px;
+    position: absolute;
+    left: 121px;
+    top: 66px;
+}
+
 footer {
     padding-top: 20px;
 }
