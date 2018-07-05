@@ -25,6 +25,10 @@ header, footer {
     background-color: beige;
 }
 
+header {
+    padding-bottom: 25px;
+}
+
 header a {
     text-decoration: none;
     color: inherit;
