@@ -73,3 +73,8 @@ Running the whole thing
 ```
 java -jar jetty-runner-9.4.9.v20180320.jar --port 3000 jetty-context-proxy.xml --path / client
 ```
+
+By the way. Jetty can also just serve the contents of a zip file.
+```
+java -jar jetty-runner-9.4.9.v20180320.jar --port 3000 jetty-context-proxy.xml --path / client.zip
+```
