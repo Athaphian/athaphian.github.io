@@ -7,6 +7,7 @@ leading expert in most of the fields I write about.
 Here is the current list of articles:
 - [Git commands for beginners](?page=git-commands)
 - [Using jetty runner to serve client & proxy](?page=jetty-client-proxy)
+- [Node Connect api + client](?page=node-client-api)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
