@@ -9,6 +9,7 @@ Here is the current list of articles:
 - [Using jetty runner to serve client & proxy](?page=jetty-client-proxy)
 - [Node Connect api + client](?page=node-client-api)
 - [Java getters & setters test](?page=getters-setters-test)
+- [JQuery JSON data loader](?page=json-data-loader)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
