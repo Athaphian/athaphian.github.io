@@ -124,7 +124,7 @@ p, ul, ol {
 }
 
 pre {
-    max-width: 800px;
+    /*max-width: 800px;*/
     white-space: pre-wrap;
 
     padding: 16px;
