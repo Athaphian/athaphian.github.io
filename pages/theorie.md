@@ -78,6 +78,7 @@
 - Op een parkeerstrook aan het einde stoppen.
 - Op suggestiestrook parkeren verboden.
 - Binnen 5m van VOP of fietsoversteekplaats verboden stil te staan.
+- Op of naast fietsstrook verboden stil te staan.
 
 ## Aanhanger en zijspan
 - Max 2,5m vanaf achteras, max 2m breed en 1m hoog.
