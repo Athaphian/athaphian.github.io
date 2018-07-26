@@ -11,6 +11,7 @@ Here is the current list of articles:
 - [Java getters & setters test](?page=getters-setters-test)
 - [JQuery JSON data loader](?page=json-data-loader)
 - [Javascript exercises](?page=javascript-exercises)
+- [AngularJS and Polymer 2-way binding](?page=angular-polymer-2-way-binding)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
