@@ -4,7 +4,7 @@ A while back I wrote a simple JQuery plugin that loads data from a specified JSO
 It works for form fields and normal HTML elements. It can also insert images and hide fields based on the JSON.
 
 ### HTML
-```
+```html
 <html>
 
 <head>
@@ -44,7 +44,7 @@ It works for form fields and normal HTML elements. It can also insert images and
 ```
 
 ### jsonDataLoader.js
-```
+```javascript
 (function ($) {
   $.fn.loadJsonData = function (options) {
     if (!options || !options.url) {
@@ -90,7 +90,7 @@ function loadDataFromJson(url, parent_element) {
 ```
 
 ### JSON data example
-```
+```json
 {
   "fields": [
     {"field": "name", "value": "John"},

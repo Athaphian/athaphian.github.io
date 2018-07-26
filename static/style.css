@@ -142,12 +142,15 @@ code {
 }
 
 blockquote {
-    margin: 1em 2em;
+    margin: 1em 2em 1em 0;
     max-width: 600px;
+    padding-left: 1em;
+    border-left: 8px solid #7b31de;
 }
 
 blockquote p {
-    color: #963d33;
+    color: #7b31de;
+    font-weight: bold;
 }
 
 hr {

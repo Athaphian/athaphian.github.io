@@ -1,4 +1,4 @@
-function initMarkdownSite(elementId, pagesPath) {
+function initMarkdownSite(elementId, pagesPath, callback) {
     showdown.setOption('strikethrough', true);
     showdown.setOption('tables', true);
     const converter = new showdown.Converter();
@@ -12,5 +12,6 @@ function initMarkdownSite(elementId, pagesPath) {
     $.get(`${pagesPath}${page}.md`).then(data => {
         const elem2 = document.getElementById(elementId);
         elem2.innerHTML = converter.makeHtml(data);
+        callback && callback();
     });
 }

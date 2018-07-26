@@ -7,7 +7,7 @@ Getting a test score of 100% on the domain model package used to be quite
 some work, during that time, I created a getters and setters test that tested
 (like its name suggests) all getters and setters of the domain model classes.
 
-```
+```java
 import static org.junit.Assert.assertEquals;
 
 import java.lang.reflect.Method;
@@ -25,7 +25,7 @@ import org.junit.Test;
 public class GettersAndSettersTest {
 
   @SuppressWarnings("rawtypes")
-  private static Class[] domainClasses = {ClassA.class, ClassB.class, etc..};
+  private static Class[] domainClasses = {ClassA.class, ClassB.class};
   
   @Test
   @SuppressWarnings("rawtypes")

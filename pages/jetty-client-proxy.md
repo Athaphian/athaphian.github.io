@@ -25,7 +25,7 @@ root
 ```
 
 The web.xml inside WEB-INF
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -54,7 +54,7 @@ The web.xml inside WEB-INF
 > Note the backend api is running on localhost:9000/api
 
 The jetty-context-proxy.xml
-```
+```xml
 <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
 <Configure class="org.eclipse.jetty.webapp.WebAppContext">
   <Set name="serverClasses">

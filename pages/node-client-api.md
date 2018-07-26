@@ -5,7 +5,7 @@ a client web app.
 
 Nothing fancy. Just here so I can easily copy/paste it when I need it.
 
-```
+```javascript
 'use strict';
 
 var connect = require('connect'),

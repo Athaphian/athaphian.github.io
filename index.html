@@ -1,10 +1,17 @@
 <html>
 <head>
 	<title>Bison Blog</title>
-	<script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="//cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<script src="static/markdown-site.js"></script>
 	<link rel="stylesheet" href="static/style.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+    <style>
+        .hljs {
+            background: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,7 +33,16 @@
 </footer>
 
 <script>
-	initMarkdownSite('content', 'pages/');
+	initMarkdownSite('content', 'pages/', function() {
+        $('pre code').each(function(i, block) {
+            try {
+                hljs.highlightBlock(block);
+            } catch (e) {
+                // Hide
+                //console.log(e);
+            }
+        });
+    });
 </script>
 </body>
 </html>
