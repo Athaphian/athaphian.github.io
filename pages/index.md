@@ -12,6 +12,7 @@ Here is the current list of articles:
 - [JQuery JSON data loader](?page=json-data-loader)
 - [Javascript exercises](?page=javascript-exercises)
 - [AngularJS and Polymer 2-way binding](?page=angular-polymer-2-way-binding)
+- [Node file scripts](?page=node-file-scripts)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
