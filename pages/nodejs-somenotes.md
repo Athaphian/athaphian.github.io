@@ -36,13 +36,22 @@ package.json
     "start": "electron ."
   },
   "dependencies": {
-    "electron": "^5.0.1"
+    "electron": "^5.0.1",
+    "express": "^4.17.0"
   }
 }
 ```
 
 main.js
 ```js
+// Serving statics
+const express = require('express');
+const expressApp = express();
+const port = 3000;
+
+expressApp.use(express.static('./'));
+expressApp.listen(port);
+
 const { app, BrowserWindow } = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
