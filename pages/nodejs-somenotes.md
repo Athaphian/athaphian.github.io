@@ -151,3 +151,18 @@ fs.readFile('csv.csv', 'utf8', function(err, contents) {
   console.log(JSON.stringify(result));
 });
 ```
+
+## Basic native JS templating
+```html
+<div class="abc">
+</div>
+
+<script>
+
+    const mount = (selector, html) => document.querySelector(selector).innerHTML = html;
+
+    var dates = ['2019', '2018', '2017', '2016'];
+    mount('.abc', `<ul>${dates.map(date => `<li>${date}</li>`).join('')}</ul>`);
+  
+</script>
+```
