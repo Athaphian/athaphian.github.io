@@ -171,20 +171,31 @@ fs.readFile('csv.csv', 'utf8', function(err, contents) {
 ```js
 const fs = require('fs');
 
-const readRecords = (directory) => new Promise(resolve => fs.readdir(directory, (err, files) => Promise.all(
-  files.filter(f => f.endsWith('.csv')).map(f => new Promise(resolve => fs.readFile(f, 'utf8', (err, contents) => {
-    const stringList = contents.trim().split(/\r?\n/g),
-      headers = stringList.splice(0, 1)[0].slice(1, -1).split('","'),
-      result = stringList.map(row => row.slice(1, -1).split('","')
-        .reduce((prev, curr, idx) => Object.assign(prev, { [headers[idx]]: curr }), {}));
-  
-    resolve(result);
-  })))
+const csvToJson = fileName => new Promise(resolve => fs.readFile(fileName, 'utf8', (err, contents) => {
+  const stringList = contents.trim().split(/\r?\n/g),
+    headers = stringList.splice(0, 1)[0].slice(1, -1).split('","'),
+    result = stringList.map(row => row.slice(1, -1).split('","')
+      .reduce((prev, curr, idx) => Object.assign(prev, { [headers[idx]]: curr }), {}));
+
+  resolve(result);
+}));
+
+const csvDirectoryToJsonList = (directory) => new Promise(resolve => fs.readdir(directory, (err, files) => Promise.all(
+  files.filter(f => f.endsWith('.csv')).map(f => csvToJson(f))
 ).then(result => resolve(result.flat()))));
 
+const getUniqueYears = (list, field) => {
+  return list
+    .map(elm => elm[field].substring(0,4))
+    .filter((el, i, arr) => arr.indexOf(el) === i)
+    .sort()
+    .reverse();
+};
+
 async function tst() {
-  const records = await readRecords('./');
+  const records = await csvDirectoryToJsonList('./');
   console.log(records.length);
+  console.log(getUniqueYears(records, 'Datum'));
 }
 
 tst();
