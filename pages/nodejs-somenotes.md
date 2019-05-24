@@ -166,3 +166,26 @@ fs.readFile('csv.csv', 'utf8', function(err, contents) {
   
 </script>
 ```
+
+## Reading all csv files in directory
+```js
+const fs = require('fs');
+
+const readRecords = (directory) => new Promise(resolve => fs.readdir(directory, (err, files) => Promise.all(
+  files.filter(f => f.endsWith('.csv')).map(f => new Promise(resolve => fs.readFile(f, 'utf8', (err, contents) => {
+    const stringList = contents.trim().split(/\r?\n/g),
+      headers = stringList.splice(0, 1)[0].slice(1, -1).split('","'),
+      result = stringList.map(row => row.slice(1, -1).split('","')
+        .reduce((prev, curr, idx) => Object.assign(prev, { [headers[idx]]: curr }), {}));
+  
+    resolve(result);
+  })))
+).then(result => resolve(result.flat()))));
+
+async function tst() {
+  const records = await readRecords('./');
+  console.log(records.length);
+}
+
+tst();
+```
