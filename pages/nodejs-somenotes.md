@@ -200,3 +200,20 @@ async function tst() {
 
 tst();
 ```
+
+## Executing command
+```js
+const command = 'mvn clean install';
+const commandList = command.split(' ');
+const firstCommand = commandList.splice(0, 1)[0];
+const child = spawn(firstCommand, commandList);
+
+child.stdout.setEncoding('utf8');
+child.stdout.on('data', (chunk) => {
+  process.stdout.write(chunk);
+});
+
+child.on('close', (code) => {
+  console.log(`child process exited with code ${code}`);
+});
+```
