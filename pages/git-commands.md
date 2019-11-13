@@ -48,3 +48,15 @@ git push origin master
 git tag -l | xargs git tag -d
 git fetch --tags
 ```
+
+##### GIT create empty commit
+```
+git commit --allow-empty
+```
+
+##### GIT release notes generation
+This will work when working with feature branches which are merged to master. It will list all
+merges to master.
+```
+git --no-pager log --pretty=format:"%ad%x09%s [%an]" -n200 | grep "Merge branch .* into 'master'"
+```
