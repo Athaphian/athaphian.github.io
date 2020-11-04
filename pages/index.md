@@ -16,6 +16,7 @@ Here is the current list of articles:
 - [Node password encryption](?page=node-password-encryption)
 - [Use Node to read csv files](?page=node-reading-csv-files)
 - [Simple LIT Component example](?page=simple-lit-component)
+- [Some Random Notes](?page=random)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
