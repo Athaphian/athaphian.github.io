@@ -68,3 +68,13 @@ set $entity $http_x_business_entity;
 
 set $args "$args${delimeter}entity=${entity}";
 ```
+
+## IntelliJ search files without searching in spec or bundles
+```
+!*spec.js,*.js,!*bundle.js
+```
+
+## OSX check which process is using a port
+```
+sudo lsof -nP -iTCP:8888 | grep LISTEN
+```
