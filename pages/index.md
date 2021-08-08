@@ -18,11 +18,12 @@ Here is the current list of articles:
 - [Some Random Notes](?page=random)
 
 #### NodeJs
-- [Node file scripts](?page=node-file-scripts)
+- [Some file scripts](?page=node-file-scripts)
 - [Use Node to read csv files](?page=node-reading-csv-files)
 - [Search for regex in files, nodejs](?page=search-regex-in-files)
 - [Node password encryption](?page=node-password-encryption)
 - [Node Connect api + client](?page=node-client-api)
+- [Files reader with progress](?page=files-reader-with-progress)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
