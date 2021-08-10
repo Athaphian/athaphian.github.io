@@ -14,8 +14,11 @@ Here is the current list of articles:
 - [Javascript exercises](?page=javascript-exercises)
 - [AngularJS and Polymer 2-way binding](?page=angular-polymer-2-way-binding)
 - [Simple LIT Component example](?page=simple-lit-component)
-- [Lodash to ES6 conversion](?lodash-es6)
+- [Lodash to ES6 conversion](?page=lodash-es6)
 - [Some Random Notes](?page=random)
+- [Shell god command](?page=shell-god-command)
+- [Docker NodeJS runner](?page=docker-node-runner)
+- [Some notes on NASM](?page=nasm)
 
 #### NodeJs
 - [Some file scripts](?page=node-file-scripts)
@@ -24,6 +27,7 @@ Here is the current list of articles:
 - [Node password encryption](?page=node-password-encryption)
 - [Node Connect api + client](?page=node-client-api)
 - [Files reader with progress](?page=files-reader-with-progress)
+- [Javascript benchmarking](?page=js-benchmark)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,

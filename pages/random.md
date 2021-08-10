@@ -20,11 +20,6 @@ Some IntelliJ key shortcuts that I find useful, but can not seem to remember.
 | Close tab         | CMD+F4            |
 | Add breakpoint    | CMD+F8            |
 
-## IntelliJ Find in path without test files
-```
-!*test.java,*.java,!Test*.java
-```
-
 ## GIT release notes generation
 In the case of using feature branches, this simple snippet can be used to generate release notes.
 ```
@@ -69,7 +64,12 @@ set $entity $http_x_business_entity;
 set $args "$args${delimeter}entity=${entity}";
 ```
 
-## IntelliJ search files without searching in spec or bundles
+## IntelliJ Find in path without searching in test files
+```
+!*test.java,*.java,!Test*.java
+```
+
+## IntelliJ Find in path without searching in spec or bundles
 ```
 !*spec.js,*.js,!*bundle.js
 ```
@@ -77,4 +77,42 @@ set $args "$args${delimeter}entity=${entity}";
 ## OSX check which process is using a port
 ```
 sudo lsof -nP -iTCP:8888 | grep LISTEN
+```
+
+## My preferred OSX terminal colors (yellow)
+```
+text: 266 266 0
+background: 30 30 0: opacity 92%, blur 0%
+```
+
+## Base64 encode a string
+```
+node -e "require('readline') .createInterface({input:process.stdin,output:process.stdout,historySize:0}) .question('PAT> ',p => { b64=Buffer.from(p.trim()).toString('base64');console.log(b64);process.exit(); })"
+```
+
+## My Law of Inverse Priority to Bug Retention Time
+The longer a bug is present in a system, the less important it becomes to fix it.
+
+## Arch Linux Docker
+```
+FROM archlinux/base:latest
+RUN apt-get update && apt-get install -y curl
+```
+
+## Reading excel files in NodeJS
+```javascript
+const readXlsxFile = require('read-excel-file/node');
+
+readXlsxFile('file.xlsx').then((rows) => {
+  // `rows` is an array of rows
+  // each row being an array of cells.
+
+  console.log(rows);
+});
+```
+
+```json
+  "dependencies": {
+    "read-excel-file": "^5.1.0"
+  }
 ```
