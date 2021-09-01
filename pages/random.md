@@ -116,3 +116,23 @@ readXlsxFile('file.xlsx').then((rows) => {
     "read-excel-file": "^5.1.0"
   }
 ```
+
+## Docker proxy settings
+When using a proxy on localhost, say on port `3128`, two things need to happen:
+1. Docker daemon needs to be able to access the internet.
+2. The docker containers need to be able to access the internet.
+
+The fist can be fixed by opening docker desktop preferences, resources, proxies and entering `http://127.0.0.1:3128` for both http and https proxy. Don't forget to add `localhost` to bypass.
+
+The second can be fixed by adding the following snippet into `~/.docker/config.json`:
+```json
+{
+  "proxies": {
+    "default": {
+      "httpProxy": "http://host.docker.internal:3128",
+      "httpsProxy": "http://host.docker.internal:3128",
+      "noProxy": "localhost"
+    }
+  }
+}
+```
