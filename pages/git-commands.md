@@ -54,9 +54,13 @@ git fetch --tags
 git commit --allow-empty
 ```
 
-##### GIT release notes generation
+### GIT release notes generation (changelog)
 This will work when working with feature branches which are merged to master. It will list all
 merges to master.
 ```
 git --no-pager log --pretty=format:"%ad%x09%s [%an]" -n200 | grep "Merge branch .* into 'master'"
+```
+This will generate a table that can be copy/pasted directly to confluence:
+```
+echo "||Date||Description||Owner||" && git --no-pager log --pretty=format:"|%ad|%s|%an|" -n200 | grep "Merged PR"
 ```

@@ -7,7 +7,7 @@ leading expert in most of the fields I write about.
 Here is the current list of articles:
 
 #### Generic
-- [Git commands for beginners](?page=git-commands)
+- [Git commands](?page=git-commands)
 - [Use Jetty runner to serve client & proxy](?page=jetty-client-proxy)
 - [Java getters & setters test](?page=getters-setters-test)
 - [JQuery JSON data loader](?page=json-data-loader)
@@ -17,8 +17,12 @@ Here is the current list of articles:
 - [Lodash to ES6 conversion](?page=lodash-es6)
 - [Some Random Notes](?page=random)
 - [Shell god command](?page=shell-god-command)
-- [Docker NodeJS runner](?page=docker-node-runner)
 - [Some notes on NASM](?page=nasm)
+
+#### Docker
+- [Docker notes](?page=docker-notes)
+- [Docker NodeJS runner](?page=docker-node-runner)
+- [Docker kafka setup](?page=docker-kafka)
 
 #### NodeJs
 - [Some file scripts](?page=node-file-scripts)

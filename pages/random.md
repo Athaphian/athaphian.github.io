@@ -20,12 +20,6 @@ Some IntelliJ key shortcuts that I find useful, but can not seem to remember.
 | Close tab         | CMD+F4            |
 | Add breakpoint    | CMD+F8            |
 
-## GIT release notes generation
-In the case of using feature branches, this simple snippet can be used to generate release notes.
-```
-git --no-pager log --pretty=format:"%ad%x09%s [%an]" -n200 | grep "Merge branch .* into 'master'" | awk '{print $1,$2,$3,$4,$5,$9}'
-```
-
 ## VS Code not updating on Mac OSX
 ```
 sudo chown -R $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt
@@ -115,24 +109,4 @@ readXlsxFile('file.xlsx').then((rows) => {
   "dependencies": {
     "read-excel-file": "^5.1.0"
   }
-```
-
-## Docker proxy settings
-When using a proxy on localhost, say on port `3128`, two things need to happen:
-1. Docker daemon needs to be able to access the internet.
-2. The docker containers need to be able to access the internet.
-
-The fist can be fixed by opening docker desktop preferences, resources, proxies and entering `http://127.0.0.1:3128` for both http and https proxy. Don't forget to add `localhost` to bypass.
-
-The second can be fixed by adding the following snippet into `~/.docker/config.json`:
-```json
-{
-  "proxies": {
-    "default": {
-      "httpProxy": "http://host.docker.internal:3128",
-      "httpsProxy": "http://host.docker.internal:3128",
-      "noProxy": "localhost"
-    }
-  }
-}
 ```
