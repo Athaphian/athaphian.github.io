@@ -54,6 +54,13 @@ git fetch --tags
 git commit --allow-empty
 ```
 
+#### Squash commits into a single commit
+```
+git rebase -i HEAD~3
+```
+> Where 3 is the number of commits you want to squash.
+> Then, if already pushed to master, use force push to rewrite the commit list
+
 ### GIT release notes generation (changelog)
 This will work when working with feature branches which are merged to master. It will list all
 merges to master.

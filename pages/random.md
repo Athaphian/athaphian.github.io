@@ -110,3 +110,8 @@ readXlsxFile('file.xlsx').then((rows) => {
     "read-excel-file": "^5.1.0"
   }
 ```
+
+## Regex to allow all diacritics
+```
+[À-ž]
+```
