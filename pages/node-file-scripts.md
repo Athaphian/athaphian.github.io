@@ -136,3 +136,33 @@ getFileList(rootPath).query(/.*\.spec\.js/, (file, list) => {
     data = data.replace(construct[0], construct[1]);
   });
 ```
+
+## Read files with glob
+```
+npm install glob
+```
+```js
+const glob = require('glob');
+
+glob('src/js/**/*.js', {}, function (err, files) {
+    if (err) throw err;
+    files.forEach(fileName => {
+        handleFile(fileName);
+    });
+});
+```
+
+## Watch files with gaze
+```
+npm install gaze
+```
+```js
+const gaze = require('gaze');
+
+gaze(pattern, function(err, watcher) {
+    this.on('all', function(event, filepath) {
+        console.log(`${filepath} was ${event}'`);
+        // Execute code here
+    });
+});
+```

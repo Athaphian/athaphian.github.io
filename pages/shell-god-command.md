@@ -34,3 +34,35 @@ Don't forget to add this run.sh to the `.bash_profile` file.
 ```shell
 export PATH=$HOME/Developer/bin:$PATH
 ```
+
+## Make a subselection
+This option can be added to the god script to import a chosen sql file into mysql.
+```
+all_sql_scripts=()
+for entry in "/path/to/database_dumps"/*.sql
+do
+    my_name="$(basename -s .sql $entry)"
+    all_sql_scripts+=($my_name)
+done
+echo "----"
+PS3='Select sql script : '
+select chosen_script in "${all_sql_scripts[@]}"
+do
+    full_url="/path/to/database_dumps/$chosen_script.sql"
+    echo "Importing SQL, please wait..."
+    mysql -u root  db_name < $full_url
+    break
+done
+break
+;;
+```
+
+## Ask for input
+This option can be added to the god script to ask the user for one line of input.
+```
+echo Name of the dump:
+read sqlscriptname
+mysqldump -u root --no-tablespaces presdb > /path/to/database_dumps/$sqlscriptname.sql
+break
+;;
+```

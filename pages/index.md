@@ -32,6 +32,8 @@ Here is the current list of articles:
 - [Node Connect api + client](?page=node-client-api)
 - [Files reader with progress](?page=files-reader-with-progress)
 - [Javascript benchmarking](?page=js-benchmark)
+- [Run command](?page=node-run-command)
+- [Name sass files](?page=name-sass-files)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
