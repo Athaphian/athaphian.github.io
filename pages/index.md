@@ -18,7 +18,6 @@ Here is the current list of articles:
 - [Some Random Notes](?page=random)
 - [Shell god command](?page=shell-god-command)
 - [Some notes on NASM](?page=nasm)
-- [Media queries in SASS](?page=media-queries-sass)
 
 #### Docker
 - [Docker notes](?page=docker-notes)
@@ -35,6 +34,10 @@ Here is the current list of articles:
 - [Javascript benchmarking](?page=js-benchmark)
 - [Run command](?page=node-run-command)
 - [Name sass files](?page=name-sass-files)
+
+#### CSS / SASS
+- [Media queries in SASS](?page=media-queries-sass)
+- [SVG as button in CSS](?page=svg-background-button)
 
 I have created this site. It is built around markdown pages which are parsed to HTML
 using [showdown](https://github.com/showdownjs/showdown). Nothing fancy is going on,
