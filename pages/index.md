@@ -34,6 +34,7 @@ Here is the current list of articles:
 - [Javascript benchmarking](?page=js-benchmark)
 - [Run command](?page=node-run-command)
 - [Name sass files](?page=name-sass-files)
+- [Serve files from node_modules using express](?page=serve-modules)
 
 #### CSS / SASS
 - [Media queries in SASS](?page=media-queries-sass)
