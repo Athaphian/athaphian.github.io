@@ -38,3 +38,21 @@ async function tst() {
 
 tst();
 ```
+
+## Another script
+This time without the splicing. Assuming that the csv does not contain quotes around every value.
+Also with a customizable delimiter.
+```
+const fs = require('fs');
+
+const csvToJson = (fileName, delimiter) => new Promise(resolve => fs.readFile(fileName, 'utf8', (err, contents) => {
+  const stringList = contents.trim().split(/\r?\n/g),
+    headers = stringList.splice(0, 1)[0].split(delimiter),
+    result = stringList.map(row => row.split(delimiter).reduce((prev, curr, idx) => Object.assign(prev, { [headers[idx]]: curr }), {}));
+  resolve(result);
+}));
+
+csvToJson("input1.csv", ";").then(result => {
+    console.log(result[0]);
+});
+```
