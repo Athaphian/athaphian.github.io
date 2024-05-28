@@ -18,6 +18,7 @@ Here is the current list of articles:
 - [Some Random Notes](?page=random)
 - [Shell god command](?page=shell-god-command)
 - [Some notes on NASM](?page=nasm)
+- [Javascript Property watcher](?page=js-property-watcher)
 
 #### Docker
 - [Docker notes](?page=docker-notes)
