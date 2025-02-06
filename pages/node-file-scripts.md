@@ -166,3 +166,19 @@ gaze(pattern, function(err, watcher) {
     });
 });
 ```
+
+## Extract a tgz file
+```js
+async function extractTgz(filePath, outputDir) {
+    try {
+        await tar.x({
+            file: filePath,
+            cwd: outputDir,
+            strip: 1
+        });
+        console.log('Extraction successful');
+    } catch (error) {
+        console.error('Extraction failed:', error);
+    }
+}
+```

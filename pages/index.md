@@ -10,15 +10,10 @@ Here is the current list of articles:
 - [Git commands](?page=git-commands)
 - [Use Jetty runner to serve client & proxy](?page=jetty-client-proxy)
 - [Java getters & setters test](?page=getters-setters-test)
-- [JQuery JSON data loader](?page=json-data-loader)
-- [Javascript exercises](?page=javascript-exercises)
-- [AngularJS and Polymer 2-way binding](?page=angular-polymer-2-way-binding)
-- [Simple LIT Component example](?page=simple-lit-component)
-- [Lodash to ES6 conversion](?page=lodash-es6)
 - [Some Random Notes](?page=random)
 - [Shell god command](?page=shell-god-command)
 - [Some notes on NASM](?page=nasm)
-- [Javascript Property watcher](?page=js-property-watcher)
+- [NGINX](?page=nginx)
 
 #### Docker
 - [Docker notes](?page=docker-notes)
@@ -36,6 +31,14 @@ Here is the current list of articles:
 - [Run command](?page=node-run-command)
 - [Name sass files](?page=name-sass-files)
 - [Serve files from node_modules using express](?page=serve-modules)
+
+#### Javascript
+- [JQuery JSON data loader](?page=json-data-loader)
+- [Javascript exercises](?page=javascript-exercises)
+- [AngularJS and Polymer 2-way binding](?page=angular-polymer-2-way-binding)
+- [Simple LIT Component example](?page=simple-lit-component)
+- [Lodash to ES6 conversion](?page=lodash-es6)
+- [Javascript Property watcher](?page=js-property-watcher)
 
 #### CSS / SASS
 - [Media queries in SASS](?page=media-queries-sass)

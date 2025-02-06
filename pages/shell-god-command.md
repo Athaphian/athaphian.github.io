@@ -4,7 +4,9 @@ This is a script, that I call a god command, because I use it for all my often-r
 run.sh
 ```shell
 PS3='Tell me what to do: '
-options=("Option 1" "Option 2" "etc")
+options=("Option 1"
+         "Option 2"
+         "etc")
 select opt in "${options[@]}"
 do
     case $opt in
